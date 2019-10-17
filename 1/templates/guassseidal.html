@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel = "stylesheet" href = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+<script type = "text/javascript" src = "https://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src = "https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"> </script>
+<script type="text/javascript" async  src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.2/MathJax.js?config=TeX-MML-AM_CHTML"> </script>
+	<title>Guass Seidal Method</title>
+</head>
+<body>
+	<h1>Guass Seidal Method</h1>
+<div class="row"><div class="col s12 m6 l4"><div class="card">
+	<form action='/' method=post>
+<input required  value="" name=a11 id=a11 onkeyup="ab()" placeholder='11' />x
+<input required  value="" name=a12 id=a12  onkeyup="ab()" placeholder='2' />y
+<input required  value="" name=a13 id=a13  onkeyup="ab()" placeholder='3' />z= 
+<input required  value="" name=a14 id=a14  onkeyup="ab()" placeholder='16' /> </br>
+<input required  value="" name=a21 id=a21 onkeyup="ab2()" placeholder='5' />x
+<input required  value="" name=a22 id=a22 onkeyup="ab2()" placeholder='16' />y
+<input required  value="" name=a23 id=a23 onkeyup="ab2()" placeholder='7' />z= 
+<input required  value="" name=a24 id=a24 onkeyup="ab2()" placeholder='28' /> </br>
+<input required  value="" name=a31 id=a31 onkeyup="ab3()" placeholder='9' />x
+<input required  value="" name=a32 id=a32 onkeyup="ab3()" placeholder='10' />y
+<input required  value="" name=a33 id=a33 onkeyup="ab3()" placeholder='21' />z= 
+<input required  value="" name=a34 id=a34 onkeyup="ab3()" placeholder='40' />
+</div></div>
+<div class="col s12 m6 l4"><div class="card">
+<span id='an1'></span></br></br>
+<span id='an2'></span></br></br>
+<span id='an3'></span>	</br></br>
+</div> </div>
+<button class="btn left " type='submit'>Solve</button></div>
+</form>
+<script type="text/javascript">
+pN=function(n) { return (n >= 0) ? "+ " + n : "- " + -n; };
+function ab(){
+	a=+document.querySelector('#a11').value;
+	b=+document.querySelector('#a12').value;
+	c=+document.querySelector('#a13').value;
+	d=+document.querySelector('#a14').value;
+	an=document.querySelector('#an1');
+	an.innerHTML=a+'x '+pN(b)+'y '+pN(c)+'z '+' = '+(d) ;
+}
+function ab2(){
+	a=+document.querySelector('#a21').value;
+	b=+document.querySelector('#a22').value;
+	c=+document.querySelector('#a23').value;
+	d=+document.querySelector('#a24').value;
+	an=document.querySelector('#an2');
+	an.innerHTML=a+'x '+pN(b)+'y '+pN(c)+'z '+' = '+(d) ;
+}function ab3(){
+	a=+document.querySelector('#a31').value;
+	b=+document.querySelector('#a32').value;
+	c=+document.querySelector('#a33').value;
+	d=+document.querySelector('#a34').value;
+	an=document.querySelector('#an3');
+	an.innerHTML=a+'x '+pN(b)+'y '+pN(c)+'z '+' = '+(d) ;
+}
+</script>
+<style type="text/css"> 
+input   {
+    width: 40px !important;
+    height: 20px !important; 
+    border-style: groove !important;
+}
+</style>
+</body>
+</html>
